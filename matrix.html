@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix Experience</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="matrix-text" id="matrix-text">
+    </div>
+    <div class="image-section">
+        
+        <form action="enviar_email.php.php" method="post" id="imageForm">
+            <input type="hidden" name="imagem" id="imagemInput">
+            <button type="submit" class="image-button">
+                <img class="image" src="matrix.png.jpg" alt="Imagem 1" onclick="setImagemValue('matrix.png.jpg')">
+            </button>
+        </form>
+       
+        <form action="enviar_email.php.php" method="post" id="imageForm2">
+            <input type="hidden" name="imagem" id="imagemInput2">
+            <button type="submit" class="image-button">
+                <img class="image" src="2883106.jpg" alt="Imagem 2" onclick="setImagemValue('2883106.jpg')">
+            </button>
+        </form>
+    
+        <form action="enviar_email.php.php" method="post" id="imageForm3">
+            <input type="hidden" name="imagem" id="imagemInput3">
+            <button type="submit" class="image-button">
+                <img class="image" src="bgsite.jpg" alt="Imagem 3" onclick="setImagemValue('bgsite.jpg')">
+            </button>
+        </form>
+        
+    </div>
+
+    <script>
+        function setImagemValue(imagem) {
+            document.getElementById('imagemInput').value = imagem;
+            document.getElementById('imagemInput2').value = imagem;
+            document.getElementById('imagemInput3').value = imagem;
+            document.getElementById('imageForm').submit();
+            document.getElementById('imageForm2').submit();
+            document.getElementById('imageForm3').submit();
+        }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
